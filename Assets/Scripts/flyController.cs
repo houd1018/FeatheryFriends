@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class flyController : MonoBehaviour
 {
-    public float speed = 5.0f; // Speed of movement
+    public float speed = 0f; // Speed of movement
 
     private Transform xrCamera;
 

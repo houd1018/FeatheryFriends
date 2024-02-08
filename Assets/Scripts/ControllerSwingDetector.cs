@@ -7,11 +7,15 @@ public class ControllerSwingDetector : MonoBehaviour
 {
     private InputDevice leftController;
     private InputDevice rightController;
+    private flyController flyController;
+    private bool hasSwinged = false;
     public float swingThreshold = 1.0f; // Set your velocity threshold here
+    public float speed = 5f;
 
     void Start()
     {
         InitializeControllers();
+        flyController = GetComponent<flyController>();
     }
 
     void InitializeControllers()
@@ -38,9 +42,11 @@ public class ControllerSwingDetector : MonoBehaviour
     {
         bool isLeftSwinging = CheckControllerVelocity(leftController, "Left Controller Velocity: ");
         bool isRightSwinging = CheckControllerVelocity(rightController, "Right Controller Velocity: ");
-        if (isLeftSwinging && isRightSwinging)
+        if (!hasSwinged & isLeftSwinging && isRightSwinging)
         {
             Debug.Log("Both controllers are swinging!");
+            flyController.speed = speed;
+            hasSwinged = true;
         }
     }
 
