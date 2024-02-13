@@ -1,11 +1,15 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class RaycastFromCameraWithTag : MonoBehaviour
 {
     public float maxRayDistance = 100.0f; // Maximum distance of the ray
     public string targetTag = "Interactable"; // Tag to identify interactable objects
+    public TriggerInputDetector triggerInputDetector;
     private GameObject lastHitObject = null; // Keep track of the last object hit by the ray
     private Camera camera;
+
+    public float moveSpeed = 20.0f; // Speed at which to move towards the object
 
     void Start()
     {
@@ -48,7 +52,15 @@ public class RaycastFromCameraWithTag : MonoBehaviour
 
                     // Update the last hit object
                     lastHitObject = hit.collider.gameObject;
+
+                    // Check if both triggers are pulled
+                    if (triggerInputDetector._isPlaying)
+                    {
+                        // Move towards the object
+                        Vector3 directionToMove = (hit.point - transform.position).normalized;
+                        transform.position += directionToMove * moveSpeed * Time.deltaTime;
                 }
+            }
             }
             else
             {
