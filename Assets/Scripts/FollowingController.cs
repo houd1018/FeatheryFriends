@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class FollowingController : MonoBehaviour
 {
-    public FadeEffect fadeEffect;
 
     public Transform targetObject; // The following object
     public float maxDistance = 100f; // Maximum allowed distance in 3D space
+
+    // ------ fade ------
+    public FadeEffect fadeEffect;
     private Transform restorePoint; // To store the restorePoint Transform
     private flyController flyController;
 
