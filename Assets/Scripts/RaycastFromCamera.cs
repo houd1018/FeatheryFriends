@@ -6,6 +6,7 @@ public class RaycastFromCameraWithTag : MonoBehaviour
     public float maxRayDistance = 100.0f; // Maximum distance of the ray
     public string targetTag = "Interactable"; // Tag to identify interactable objects
     public TriggerInputDetector triggerInputDetector;
+    public GameManager gameManager;
     private GameObject lastHitObject = null; // Keep track of the last object hit by the ray
     private Camera camera;
     public bool isDiving = false;
@@ -45,11 +46,19 @@ public class RaycastFromCameraWithTag : MonoBehaviour
             {
                 Startdiving();
             }
-            if(Vector3.Distance(transform.position, lastHitObject.transform.position) < 0.5f)
+            if (Vector3.Distance(transform.position, lastHitObject.transform.position) < 0.5f)
             {
                 isDiving = false;
-
-                StartCoroutine(fadeEffect.FadeOut(() => {
+                if (gameManager.fishCount < gameManager.fishRequired)
+                {
+                    gameManager.fishCount++;
+                }
+                else
+                {
+                    return;
+                }
+                StartCoroutine(fadeEffect.FadeOut(() =>
+                {
                     // Set the XR Origin's position and rotation to that of the restorePoint
                     transform.position = restorePoint.position;
                     transform.rotation = restorePoint.rotation;

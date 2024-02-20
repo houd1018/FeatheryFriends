@@ -8,6 +8,7 @@ public class FollowingController : MonoBehaviour
 
     public Transform targetObject; // The following object
     public float maxDistance = 100f; // Maximum allowed distance in 3D space
+    private bool hasLost;
 
     // ------ fade ------
     public FadeEffect fadeEffect;
@@ -34,14 +35,16 @@ public class FollowingController : MonoBehaviour
     void Update()
     {
         // Check distance from the target object
-        if (Vector3.Distance(transform.position, targetObject.position) > maxDistance && restorePoint != null)
+        if (Vector3.Distance(transform.position, targetObject.position) > maxDistance && restorePoint != null && !hasLost)
         {
+            hasLost = true;
             Debug.Log("Lost!");
             StartCoroutine(fadeEffect.FadeOut(() => {
                 // Set the XR Origin's position and rotation to that of the restorePoint
                 transform.position = restorePoint.position;
                 transform.rotation = restorePoint.rotation;
                 flyController.speed = 0;
+                hasLost = false;
             }));
         }
     }
