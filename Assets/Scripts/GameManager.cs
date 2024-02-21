@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
         // fishing transition
         if (fishCount >= fishRequired && !hasfished)
         {
+            Debug.Log("mom teleport");
+            momEagle.GetComponent<Animator>().Play("Base Layer.FlyRoute_2");
+
             StartCoroutine(fadeEffect.FadeOut(() =>
             {
                 // Set the XR Origin's position and rotation to that of the restorePoint
@@ -30,10 +33,6 @@ public class GameManager : MonoBehaviour
                 player.transform.rotation = fishingEndpoint.rotation;
                 player.GetComponent<flyController>().speed = 0;
                 hasfished = true;
-
-                momEagle.transform.position = fishingEndpoint.position;
-                momEagle.transform.rotation = fishingEndpoint.rotation;
-                momEagle.GetComponent<Animator>().SetBool("Phase_2", true);
             }));
 
             if (player.GetComponent<FollowingController>())
@@ -42,6 +41,4 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-
 }

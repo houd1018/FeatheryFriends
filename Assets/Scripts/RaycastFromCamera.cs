@@ -124,7 +124,7 @@ public class RaycastFromCameraWithTag : MonoBehaviour
     void ResetObjectColor(GameObject obj)
     {
         // Reset the object's color to white (or any original color)
-        SetObjectColor(obj, Color.white);
+        SetObjectColor(obj, Color.grey);
     }
 
     void Startdiving()

@@ -7,6 +7,8 @@ public class FishingTeleporrt : MonoBehaviour
     // Set this position in the Unity Editor or through another script
     public Transform teleportPosition;
 
+    public SoundManager soundManager;
+
     [Header("fade")]
     // ------ fade ------
     public FadeEffect fadeEffect;
@@ -24,7 +26,10 @@ public class FishingTeleporrt : MonoBehaviour
             StartCoroutine(fadeEffect.FadeOut(() => {
                 // Teleport the player to the designated position
                 collision.gameObject.transform.position = teleportPosition.position;
+                collision.gameObject.GetComponent<flyController>().speed = 0;
             }));
+
+            soundManager.PlaySound_Fly_Touch_the_lake_collider();
 
         }
     }
