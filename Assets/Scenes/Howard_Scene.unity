@@ -602,6 +602,11 @@ PrefabInstance:
       objectReference: {fileID: 1054354906}
     - target: {fileID: 4717470782347003172, guid: fe41343a4c5fd0b46a0948f0124be441,
         type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 2123070585}
+    - target: {fileID: 4717470782347003172, guid: fe41343a4c5fd0b46a0948f0124be441,
+        type: 3}
       propertyPath: swingThreshold
       value: 2.5
       objectReference: {fileID: 0}
@@ -6837,7 +6842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   At_the_nest: {fileID: 8300000, guid: 7ec850155ce34224bbea3522a74e8c40, type: 3}
-  After_take_off: {fileID: 8300000, guid: fc945001240b9c040a6c062229117c67, type: 3}
+  After_take_off: {fileID: 8300000, guid: fee212a7635726345b670faae747d06a, type: 3}
   Fly_near_to_the_lake: {fileID: 8300000, guid: 112c620b6589c1344845dd2c1c9cf832,
     type: 3}
   Touch_the_lake_collider: {fileID: 8300000, guid: 54c89241ad195154185d59eebe1c0c15,

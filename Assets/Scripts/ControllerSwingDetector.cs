@@ -8,6 +8,7 @@ using System; // Add this for UI elements
 public class ControllerSwingDetector : MonoBehaviour
 {
     public GameManager gameManager;
+    public SoundManager soundManager;
     private InputDevice leftController;
     private InputDevice rightController;
     private flyController flyController;
@@ -162,6 +163,7 @@ public class ControllerSwingDetector : MonoBehaviour
                 if (!hasflyied_1)
                 {
                     gameManager.mom_currentState = GameManager.MomEagleState.FlyRoute_1;
+                    soundManager.PlaySound_After_take_off();
                     hasflyied_1 = true;
                 }
 
