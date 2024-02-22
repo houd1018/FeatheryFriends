@@ -40,7 +40,7 @@ public class RaycastFromCameraWithTag : MonoBehaviour
             isDiving = true;
         }
 
-        if (isDiving)
+        if (isDiving && gameManager.isFishing)
         {
             if (lastHitObject != null)
             {

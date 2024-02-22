@@ -7,7 +7,9 @@ public class FishingTeleporrt : MonoBehaviour
     // Set this position in the Unity Editor or through another script
     public Transform teleportPosition;
 
+
     public SoundManager soundManager;
+    public GameManager gameManager;
 
     [Header("fade")]
     // ------ fade ------
@@ -30,6 +32,7 @@ public class FishingTeleporrt : MonoBehaviour
             }));
 
             soundManager.PlaySound_Fly_Touch_the_lake_collider();
+            gameManager.isFishing = true;
 
         }
     }

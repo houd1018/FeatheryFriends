@@ -43,7 +43,7 @@ public class FollowingController : MonoBehaviour
                 // Set the XR Origin's position and rotation to that of the restorePoint
                 transform.position = restorePoint.position;
                 transform.rotation = restorePoint.rotation;
-                flyController.speed = 0;
+                // flyController.speed = 0;
                 hasLost = false;
             }));
         }

@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Howard_Scene.unity
     guid: 17c8c586e7e657b4f93b7bbd98eb4693
+  - enabled: 1
+    path: Assets/Scenes/Howard_Scene_2.unity
+    guid: 753edcfb25417514f851e45131a62d60
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: fb4411d457ba6b6409d9c37abd4a25f3,
       type: 2}
