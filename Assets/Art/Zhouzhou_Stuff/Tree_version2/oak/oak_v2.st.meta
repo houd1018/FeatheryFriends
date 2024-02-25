@@ -1,7 +1,12 @@
 fileFormatVersion: 2
 guid: ddde5bb2077d09742ad180b8511aacb1
 SpeedTreeImporter:
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oak_v2_LOD0
+    second: {fileID: 2100000, guid: 661a37c6f7730ee41ab6cf0d2ee24141, type: 2}
   serializedVersion: 6
   mainColor: {r: 1, g: 1, b: 1, a: 1}
   hueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}

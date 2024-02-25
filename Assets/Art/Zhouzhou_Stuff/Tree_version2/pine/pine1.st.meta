@@ -1,7 +1,12 @@
 fileFormatVersion: 2
 guid: 239e2708d9509e24181e817809ea6a5e
 SpeedTreeImporter:
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pine1_LOD0
+    second: {fileID: 2100000, guid: a6f0220c28c7f5f44bcd0a6f638ce0ae, type: 2}
   serializedVersion: 6
   mainColor: {r: 1, g: 1, b: 1, a: 1}
   hueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}

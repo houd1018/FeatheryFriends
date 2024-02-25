@@ -1,7 +1,12 @@
 fileFormatVersion: 2
 guid: 9b8edc13c3859624eb16bc2e6c7b1b9a
 SpeedTreeImporter:
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: spruce1_LOD0
+    second: {fileID: 2100000, guid: 9969838b3e29aa9448345745608190ce, type: 2}
   serializedVersion: 6
   mainColor: {r: 1, g: 1, b: 1, a: 1}
   hueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
