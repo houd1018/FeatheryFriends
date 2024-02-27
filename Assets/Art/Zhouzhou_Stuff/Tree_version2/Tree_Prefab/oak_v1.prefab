@@ -88,16 +88,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: oak_v1
       objectReference: {fileID: 0}
-    - target: {fileID: 4742473837712756890, guid: f57730f5d72d3b94bb7be4afc7ffd68f,
-        type: 3}
-      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
-      value: 0.13942853
-      objectReference: {fileID: 0}
-    - target: {fileID: 4742473837712756890, guid: f57730f5d72d3b94bb7be4afc7ffd68f,
-        type: 3}
-      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
-      value: 0.024889274
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
